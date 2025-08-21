@@ -1,0 +1,262 @@
+@import './variables.scss';
+@import './about.scss';
+@import './projects.scss';
+@import './contact.scss';
+@import './hero.scss';
+@import './responsive.scss';
+
+*{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: all 0.2s ease;
+    font-family: $font-text;
+    object-fit: cover;
+}
+
+h1, h2, h3, a, p{
+    color : $dark-pink;
+}
+
+h1, .name, h2, h3{
+    font-family: $font-title;
+    font-weight: $bold;
+}
+
+h2{
+    font-size: 41px;
+    text-align: center;
+    margin-bottom : 16px
+}
+
+h3{
+    font-size: 29px;
+    margin-bottom : 19px;
+}
+
+header>div, #about, footer>div, #projects>div, #profile>div{
+    max-width: 1440px;
+    margin : auto;
+}
+
+.button{
+    padding : 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-button;
+}
+
+.green{
+    background-color :$green-button ;
+    color : $pale-rose;
+
+    &:hover{
+        background-color : $pink-button
+    }
+}
+
+.blue{
+    background-color : $pink-button ;
+    color : $pale-rose;
+
+    &:hover{
+        background-color :$green-button
+    }
+}
+
+.link{
+    color : $green-link;
+    display: block; /*alignement vertical*/
+    margin-bottom : 5px;
+
+    .arrow{
+        color : $green-link;
+        font-size: 13px;
+        margin-left : 4px
+    }
+
+    &:hover {
+        color : $pink-button;
+
+        .arrow{
+            margin-left : 13px;
+            color : $pink-button
+        } 
+    }
+}
+
+header{
+    background-color: $pale-rose; 
+
+    > div{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding : 25px 15px;
+
+        .name{
+            font-size: 24px;
+            color : $dark-pink;
+        }
+
+        .burger{
+            display: none;
+        }
+
+        nav ul{
+            display: flex;
+            gap : 15px;
+
+            a{
+                font-weight: 600;
+            }
+
+            div{
+                margin-top : 2px;
+                height : 2px;
+                width :0%; /*invisible*/
+                background-color: $pink-button;
+            }
+
+            li:hover{
+                a{
+                    color: $green-button;
+                }
+            
+                div{
+                    width : 100%
+                }
+            }
+
+            .pink{
+                color : $pink-nav;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $dark-pink; /* background sur toute la longueur de l'écran */
+
+    *{
+         color : $pale-rose;
+    }
+   
+    > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding : 25px 15px;
+
+        p{
+            margin-top : 8px
+        }
+
+        .name{
+            font-size: 24px;
+        }
+
+        div:last-of-type{
+            text-align: end;
+
+            svg{
+                margin-left: 10px;
+                background-color: #886a83b5;
+                border-radius: 25px;
+                padding : 9px;
+                cursor: pointer;
+
+                &:hover{
+                    color : #2f5730;
+                    background-color : #cfe7b989;
+                }
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+#profile{
+    position : relative;
+
+    &:before{
+        content :"";
+
+        background-image: 
+            radial-gradient(#944594 4px, transparent 4px), 
+            radial-gradient(#7c657c 4px, transparent 4px);
+        background-size: 73px 73px;
+        background-position: 0 0, 36.5px 36.5px;
+        background-color: rgb(89 4 67 / 45%);
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    > div{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        padding : 200px 15px;
+        gap : 100px;
+
+        article, div{
+            flex : 1 /*division even*/
+        }
+
+        *{
+            color : $pale-rose;
+        }
+
+        h1{
+            font-size: 60px;
+        }
+
+        p:first-of-type{
+            font-size: 24px;
+            margin-top : 4px; 
+            margin-bottom : 30px;
+        }
+
+        p:last-of-type{
+            margin-bottom : 33px; 
+            font-size: 18px;
+        }
+
+        img{
+            border-radius: 185px;
+            border: 4px dashed #534352;
+            width: 50%;
+            margin-left : calc(50% - 135px);  
+        }
+
+        > div{
+            position: relative;
+
+            &::after{
+                position: absolute;
+                content: "</>";
+                font-size: 50px;
+                font-weight: 500;
+                background: #041f00;
+                background: linear-gradient(
+                    308deg, rgb(65 120 57) 0%, 
+                    rgb(205 220 203) 100%
+                );
+                color: #678f5c;
+                border-radius: 50px;
+                bottom: -20px;
+                right: 170px;
+                padding: 14px 18px 18px 18px;
+                z-index: 2;
+            }  
+        }
+    }
+}

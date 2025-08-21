@@ -1,0 +1,82 @@
+@media screen and (max-width: 1024px){ /*TABLETTE*/
+    #profile > div{
+        padding: 140px 15px;
+
+        img {
+            width : 200px
+        }
+
+        >div:after{
+            right: 90px;
+        }
+    } 
+
+    #projects > div > div > article > img{
+        height : 180px
+    }
+}
+
+@media screen and (max-width: 678px){ /*MOBILE*/
+    #nav{
+        display: none;
+    }
+
+    #bars{
+        display : block
+    }
+
+    #profile > div{
+        flex-direction: column;
+
+        img{
+            margin-left :calc(50% - 100px) ;
+        }
+
+        h1 {
+            font-size: 54px;
+        }
+
+        >div:after{
+            right: -90px;
+        }
+    }
+
+    #about{
+        >div{
+            flex-direction: column;
+
+            > div > div{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+
+    #projects{
+        > div > div{
+            flex-direction: column;
+        }
+    }
+
+    #contact form{
+        grid-template-columns: 1fr;
+
+        label[for="input-mail"]{
+            grid-row:3 ;
+        }
+    }
+
+    footer >div{
+        flex-direction: column;
+
+        #icone-container{
+
+            width : fit-content;
+            margin : 15px auto
+        }
+
+        p{
+            text-align: left;
+        }
+    }
+}
+

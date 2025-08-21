@@ -1,0 +1,27 @@
+#bandeau{
+    position : relative;
+    height : 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before{
+        content :"";
+        background-image: 
+            radial-gradient(#944594 4px, transparent 4px), 
+            radial-gradient(#7c657c 4px, transparent 4px);
+        background-size: 73px 73px;
+        background-position: 0 0, 36.5px 36.5px;
+        background-color: rgb(89 4 67 / 45%);
+        /* padding : 150px 0; */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }    
+
+    h2{
+        color : $pale-rose;
+        font-size: 70px;
+    }
+}
