@@ -1,0 +1,49 @@
+header{
+    background-color: $pale-rose; 
+
+    > div{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding : 25px 15px;
+
+        .name{
+            font-size: 24px;
+            color : $dark-pink;
+        }
+
+        .burger{
+            display: none;
+        }
+
+        nav ul{
+            display: flex;
+            gap : 15px;
+
+            a{
+                font-weight: 600;
+            }
+
+            div{
+                margin-top : 2px;
+                height : 2px;
+                width :0%; /*invisible*/
+                background-color: $pink-button;
+            }
+
+            li:hover{
+                a{
+                    color: $green-button;
+                }
+            
+                div{
+                    width : 100%
+                }
+            }
+
+            .pink{
+                color : $pink-nav;
+            }
+        }
+    }
+}
