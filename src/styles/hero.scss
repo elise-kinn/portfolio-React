@@ -1,9 +1,7 @@
 #bandeau{
     position : relative;
     height : 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(0, center, column);
 
     &:before{
         content :"";

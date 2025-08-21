@@ -7,11 +7,9 @@
     }
 
     form{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include grid(1fr 1fr);
         max-width : 530px;
         margin : auto;
-        gap : 5px;
         background-color: $pale-rose;
         padding : 40px;
         border-radius: 8px;

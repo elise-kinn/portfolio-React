@@ -6,10 +6,8 @@ footer{
     }
    
     > div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding : 25px 15px;
+        @include flex-center(0, space-between, column);
+        padding : $padding-footer-header;
 
         p{
             margin-top : 8px

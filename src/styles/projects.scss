@@ -13,8 +13,7 @@
     }
 
     > div > div{
-        display: flex ;
-        gap : 30px;
+        @include flex-center(30px, flex-start, row);
         max-width: 1300px;
         margin : auto;
 
@@ -50,7 +49,7 @@
                     &::after, &::before{
                         color : #83a286a1; 
                         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                        font-weight: 700;
+                        font-weight: $bold;
                         opacity : 0
                     }
 
@@ -67,9 +66,8 @@
 
                 div{
                     margin : 14px 0 22px 0;
-                    display: flex;
+                    @include flex-center(15px, flex-start, row);
                     flex-wrap: wrap; 
-                    gap : 15px;
 
                     span{
                         background-color: $pink-span;
