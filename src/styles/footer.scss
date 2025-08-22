@@ -6,7 +6,7 @@ footer{
     }
    
     > div{
-        @include flex-center(0, space-between, column);
+        @include flex-center(0, space-between, row);
         padding : $padding-footer-header;
 
         p{
